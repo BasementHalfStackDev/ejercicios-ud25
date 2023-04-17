@@ -1,3 +1,7 @@
+/**
+ * @author BasementHalfStackDev/Josep Maria PAllas Batalla
+ */
+
 package E1.dto;
 
 import java.util.List;
