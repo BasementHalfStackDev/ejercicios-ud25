@@ -3,6 +3,10 @@
  */
 package E1.dao;
 
-public interface ArticuloDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import E1.dto.Articulo;
+
+public interface ArticuloDAO extends JpaRepository<Articulo, Long> {
 
 }

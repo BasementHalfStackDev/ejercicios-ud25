@@ -3,6 +3,10 @@
  */
 package E1.dao;
 
-public interface FabricanteDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import E1.dto.Fabricante;
+
+public interface FabricanteDAO extends JpaRepository<Fabricante, Long> {
 
 }
