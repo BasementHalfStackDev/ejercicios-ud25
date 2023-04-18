@@ -31,11 +31,6 @@ public class AlmacenController {
 		return almacenService.listAlmacenes();
 	}
 
-	@PostMapping("/almacenes")
-	public Almacen saveAlmacen(@RequestBody Almacen almacen) {
-		return almacenService.saveAlmacen(almacen);
-	}
-
 	@GetMapping("/almacenes/{id}")
 	public Almacen almacenById(@PathVariable(name = "id") Long id) {
 		Almacen almacenxID = new Almacen();
@@ -43,6 +38,11 @@ public class AlmacenController {
 		almacenxID = almacenService.almacenById(id);
 
 		return almacenxID;
+	}
+
+	@PostMapping("/almacenes")
+	public Almacen saveAlmacen(@RequestBody Almacen almacen) {
+		return almacenService.saveAlmacen(almacen);
 	}
 
 	@PutMapping("/almacenes/{id}")

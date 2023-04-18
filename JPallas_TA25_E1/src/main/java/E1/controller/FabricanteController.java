@@ -31,11 +31,6 @@ public class FabricanteController {
 		return fabricanteService.listFabricantes();
 	}
 
-	@PostMapping("/fabricantes")
-	public Fabricante saveFabricante(@RequestBody Fabricante fabricante) {
-		return fabricanteService.saveFabricante(fabricante);
-	}
-
 	@GetMapping("/fabricantes/{id}")
 	public Fabricante fabricanteById(@PathVariable(name = "id") Long id) {
 		Fabricante fabricantexID = new Fabricante();
@@ -43,6 +38,11 @@ public class FabricanteController {
 		fabricantexID = fabricanteService.FabricanteById(id);
 
 		return fabricantexID;
+	}
+
+	@PostMapping("/fabricantes")
+	public Fabricante saveFabricante(@RequestBody Fabricante fabricante) {
+		return fabricanteService.saveFabricante(fabricante);
 	}
 
 	@PutMapping("/fabricantes/{id}")
