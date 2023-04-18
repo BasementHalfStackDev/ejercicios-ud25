@@ -3,6 +3,10 @@
  */
 package E3.dao;
 
-public interface AlmacenDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import E3.dto.Almacen;
+
+public interface AlmacenDAO extends JpaRepository<Almacen, Long> {
 
 }

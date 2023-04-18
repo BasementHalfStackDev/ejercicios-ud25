@@ -3,6 +3,10 @@
  */
 package E3.dao;
 
-public interface CajaDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import E3.dto.Caja;
+
+public interface CajaDAO extends JpaRepository<Caja, String>{
 
 }
