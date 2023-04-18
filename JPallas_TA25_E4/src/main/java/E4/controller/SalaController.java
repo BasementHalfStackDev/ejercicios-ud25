@@ -43,7 +43,7 @@ public class SalaController {
 		return salaService.saveSala(sala);
 	}
 
-	@PutMapping("/salas/{ref_num}")
+	@PutMapping("/salas/{id}")
 	public Sala updateSala(@PathVariable(name = "id") Long id, @RequestBody Sala sala) {
 		Sala sala_Selected = new Sala(id, sala.getNombre(), sala.getPelicula());
 		Sala sala_Updated = new Sala();
@@ -53,7 +53,7 @@ public class SalaController {
 		return sala_Updated;
 	}
 
-	@DeleteMapping("/salas/{ref_num}")
+	@DeleteMapping("/salas/{id}")
 	public void deleteSala(@PathVariable(name = "id") Long id) {
 		salaService.deleteSala(id);
 	}
