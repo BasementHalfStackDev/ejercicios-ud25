@@ -54,7 +54,7 @@ public class AlmacenController {
 		return updatedAlmacen;
 	}
 
-	@DeleteMapping("/fabricantes/{id}")
+	@DeleteMapping("/almacenes/{id}")
 	public void deleteAlmacen(@PathVariable(name = "id") Long id) {
 		almacenService.deleteAlmacen(id);
 	}
