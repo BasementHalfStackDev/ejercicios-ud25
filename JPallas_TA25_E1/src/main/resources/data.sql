@@ -13,7 +13,7 @@ CREATE TABLE articulos(
 	precio INT,
 	fabricante int,
 	PRIMARY KEY(id),
-	FOREIGN KEY (fabricante) REFERENCES fabricantes(id)
+	CONSTRAINT FK_fabricante FOREIGN KEY (fabricante) REFERENCES fabricantes(id)
 	ON DELETE CASCADE ON UPDATE CASCADE
 );
 

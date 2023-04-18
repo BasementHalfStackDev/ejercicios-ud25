@@ -53,7 +53,7 @@ public class FabricanteController {
 		updatedFabricante = fabricanteService.updateFabricante(selectedFabricante);
 		return updatedFabricante;
 	}
-	
+
 	@DeleteMapping("/fabricantes/{id}")
 	public void deleteFabricante(@PathVariable(name = "id") Long id) {
 		fabricanteService.deleteFabricante(id);

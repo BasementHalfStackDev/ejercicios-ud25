@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -25,9 +26,12 @@ public class Fabricante {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "nombre")
 	private String nombre;
+	
 	@OneToMany
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "FK_fabricante")
 	private List<Articulo> articulo;
 
 	// Constructor
