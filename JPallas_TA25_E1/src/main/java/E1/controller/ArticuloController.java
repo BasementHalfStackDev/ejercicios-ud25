@@ -31,16 +31,16 @@ public class ArticuloController {
 		return articuloService.listArticulo();
 	}
 
-	@PostMapping("/articulos")
-	public Articulo saveArticulo(@RequestBody Articulo articulo) {
-		return articuloService.saveArticulo(articulo);
-	}
-
 	@GetMapping("/articulos/{id}")
 	public Articulo articuloById(@PathVariable(name = "id") Long id) {
 		Articulo articuloById = new Articulo();
 		articuloById = articuloService.ArticuloById(id);
 		return articuloById;
+	}
+
+	@PostMapping("/articulos")
+	public Articulo saveArticulo(@RequestBody Articulo articulo) {
+		return articuloService.saveArticulo(articulo);
 	}
 
 	@PutMapping("/articulos/{id}")
