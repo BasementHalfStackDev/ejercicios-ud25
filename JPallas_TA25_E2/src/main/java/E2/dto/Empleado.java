@@ -3,6 +3,7 @@
  */
 package E2.dto;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -17,7 +18,10 @@ public class Empleado {
 	@Id
 	private String dni;
 
+	@Column(name = "nombre")
 	private String nombre;
+
+	@Column(name = "apellidos")
 	private String apellido;
 
 	@ManyToOne()
